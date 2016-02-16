@@ -212,7 +212,7 @@ public class Rekenen {
 		if(aantalAtotx <=1)	{
 			if(Atotx[0] == false && B<=1){												
 					if( A == 3 && B ==1 && log == 0 && Sin ==0 && Cos == 0 && Tan == 0 && BwaardesVoorClass[0] == 2 && X == 2 ){			// hierbij moet die ene macht wel gelijk zijn aan 2, anders numeriek oplossen
-						GUITestPWS.textField.setText("x = "  + kwadratischeformule1(AwaardesVoorClass[0],AwaardesVoorClass[1],AwaardesVoorClass[2])+ " & " +"x = " + kwadratischeformule2(AwaardesVoorClass[0],AwaardesVoorClass[1],AwaardesVoorClass[2]) );
+						GUIpws.textField.setText("x = "  + kwadratischeformule1(AwaardesVoorClass[0],AwaardesVoorClass[1],AwaardesVoorClass[2])+ " & " +"x = " + kwadratischeformule2(AwaardesVoorClass[0],AwaardesVoorClass[1],AwaardesVoorClass[2]) );
 					
 						
 					}
@@ -221,37 +221,37 @@ public class Rekenen {
 					}
 					else if ( A==1 && B==1 && log == 0 && Sin ==0&& Cos == 0 && Tan == 0 && X == 1){
 						
-						GUITestPWS.textField.setText("x = " + eenTermOplossen( AwaardesVoorClass[0], BwaardesVoorClass[0], antwoord));
+						GUIpws.textField.setText("x = " + eenTermOplossen( AwaardesVoorClass[0], BwaardesVoorClass[0], antwoord));
 					}
 					
 					else if (A==1 && log == 1 && X == 1 ){
 						double logBase = 2.0; 					
 						
-						GUITestPWS.textField.setText("x= " + logb(logBase, antwoord ));
+						GUIpws.textField.setText("x= " + logb(logBase, antwoord ));
 					}
 					else if((A==2||A==1) && X==1 && B==0 && Sin==0 && Cos== 0 && Tan==0 && log==0){
-						GUITestPWS.textField.setText("x = " + antwoord/ AwaardesVoorClass[0]);
+						GUIpws.textField.setText("x = " + antwoord/ AwaardesVoorClass[0]);
 					}
 					else if ((A==2||A==1) && Sin==1 && X == 1){
-						GUITestPWS.textField.setText("x = "  + Sinx(antwoord, AwaardesVoorClass[0]));
+						GUIpws.textField.setText("x = "  + Sinx(antwoord, AwaardesVoorClass[0]));
 				}
 					else if ((A==2||A==1) && Cos==1 && X == 1){
-						GUITestPWS.textField.setText("x = " + Cosx(antwoord, AwaardesVoorClass[0]));
+						GUIpws.textField.setText("x = " + Cosx(antwoord, AwaardesVoorClass[0]));
 					}
 					else if ((A==2||A==1) && Tan==1 && X == 1){
-						GUITestPWS.textField.setText("x = " + Tanx(antwoord, AwaardesVoorClass[0]));
+						GUIpws.textField.setText("x = " + Tanx(antwoord, AwaardesVoorClass[0]));
 					}
 			}
 					else if(Atotx[0] == true){
 						if (A==1 && log ==0){
 															
-							GUITestPWS.textField.setText("x = " +Atotx( AwaardesVoorClass[0], antwoord ));
+							GUIpws.textField.setText("x = " +Atotx( AwaardesVoorClass[0], antwoord ));
 					}
 					}
 					else if (A==2  && log ==0){			
 						if(Atotx[1] = true){
 							
-							System.out.println("x = " + AtotXPlusB( AwaardesVoorClass[0], AwaardesVoorClass[1], antwoord ));
+							GUIpws.textField.setText("x = " + AtotXPlusB( AwaardesVoorClass[0], AwaardesVoorClass[1], antwoord ));
 						}
 					
 					}
