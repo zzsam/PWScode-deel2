@@ -138,16 +138,16 @@ public class Rekenen {
  		if (kwadraat >=1 && kwadraat <=-1)   {
  			if((kwadraat)%2 ==0){
  				double antwoord = -1 * Math.pow( B/A, kwadraatAntwoord);
- 				System.out.println("De vergelijking lost op bij x= 0 & bij x= "+ antwoord );
+ 				GUIpws.textField.setText("x= 0 & x= "+ antwoord );
  			}	
  			else{
  				double antwoord = -1 * Math.pow( B/A, kwadraatAntwoord); 
- 				System.out.println("De vergelijking lost op bij x= 0 & bij x= "+ antwoord+ " & bij x= "+ -antwoord );
+ 				GUIpws.textField.setText("x= 0 & x= "+ antwoord+ " & bij x= "+ -antwoord );
  			}
  			}
  			else {
  				double antwoord = -1 * Math.pow( B/A, kwadraatAntwoord);
- 				System.out.println("De vergelijking is nul bij x= 0 & bij x= "+ antwoord );
+ 				GUIpws.textField.setText("x= 0 & x= "+ antwoord );
  			}
  	}
   
@@ -186,19 +186,19 @@ public class Rekenen {
     	x = (Math.log10(c)) / (Math.log10(a));
     	return x;
     }
-    //sin x = c hier wordt x berekend
+    //a * sin x = c hier wordt x berekend
     public static double Sinx(double antwoord, double a1){
 		double save = StrictMath.asin(antwoord/a1);
 			
 		return save;
 	}
-    //cos x = hier wordt x berekend
+    //a *cos x = c hier wordt x berekend
 	public static double Cosx(double antwoord, double a1){
 		double save = StrictMath.acos(antwoord/a1);
 		
 		return save;
 	}
-	//tan x = c hier wordt x berekend
+	//a *tan x = c hier wordt x berekend
 	public static double Tanx(double antwoord, double a1){
 		double save = StrictMath.atan(antwoord/a1);
 		
@@ -218,6 +218,9 @@ public class Rekenen {
 					}
 					else if( A==2 && B==1 && log == 0 && Sin ==0 && Cos == 0 && Tan == 0 && X ==2){
 						simpelOntbinden(AwaardesVoorClass[0], BwaardesVoorClass[0], AwaardesVoorClass[1]);
+					}
+					else if (A==2 && B==0 && log == 0 && Sin ==0 && Cos == 0 && Tan == 0 && X ==2){
+						GUIpws.textField.setText("x = 0");
 					}
 					else if ( A==1 && B==1 && log == 0 && Sin ==0&& Cos == 0 && Tan == 0 && X == 1){
 						
